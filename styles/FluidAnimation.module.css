@@ -1,0 +1,19 @@
+.fluidContainer {
+    @apply fixed top-0 left-0 w-full h-full overflow-hidden z-[-1];
+  }
+  
+  .particle {
+    @apply absolute w-2 h-2 rounded-full;
+    animation: particleFlow 10s linear infinite;
+  }
+  
+  @keyframes particleFlow {
+    0% {
+      transform: translate(-50%, 0) scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, 100vh) scale(3) rotate(720deg);
+      opacity: 0;
+    }
+  }

@@ -13,7 +13,7 @@ const Products = () => {
         />
         <h1 className="text-4xl font-bold mb-4 text-black">Coming Soon!</h1>
         <p className="text-lg mb-8 text-black">
-          We're excited to share our latest product with you. Stay tuned for updates as we put the finishing touches on
+          We&apos;re excited to share our latest product with you. Stay tuned for updates as we put the finishing touches on
           something truly remarkable.
         </p>
         <form className="flex flex-col sm:flex-row">

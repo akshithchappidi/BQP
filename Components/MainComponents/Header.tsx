@@ -1,29 +1,34 @@
 // components/MainComponent/Header.tsx
 import Link from "next/link";
+import { useState } from "react";
+import Image from "next/image";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="bg-white  fixed w-full z-50">
-      <nav className="container mx-auto flex justify-between items-center">
+    <header className="bg-white fixed w-full z-50">
+      <nav className="container mx-auto flex justify-between items-center p-1">
         <div>
-          <img src="/BQP_Logo.png" alt="Company Logo" className="h-32 w-auto px-16" />
+          <Image src="/BQP_Logo.png" alt="Company Logo" width={150} height={50} />
         </div>
-        {/* <h1 className="text-3xl font-bold text-center text-black">BosonQ Psi</h1> */}
-        <ul className="flex space-x-4">
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <i className="fa fa-bars"></i>
+          </button>
+        </div>
+        <ul className={`flex space-x-4 ${isOpen ? "" : "hidden"} md:flex`}>
           <li>
-            <Link href="/" className="text-3xl text-black px-8">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/career" className="text-3xl text-black px-4">Career</Link>
-          </li>
-          {/* <li>
-            <Link href="/products" className="text-xl">Products</Link>
-          </li> */}
-          <li>
-            <Link href="/about" className="text-3xl text-black px-4">About Us</Link>
+            <Link href="/career">Career</Link>
           </li>
           <li>
-            <Link href="/newsroom" className="text-3xl text-black px-2">News Room</Link>
+            <Link href="/about">About Us</Link>
+          </li>
+          <li>
+            <Link href="/newsroom">News Room</Link>
           </li>
         </ul>
       </nav>

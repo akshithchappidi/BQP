@@ -1,29 +1,24 @@
 import Image from "next/image";
+import Header from "../components/MainComponent/Header";
 
 export default function Home() {
   return (
     <div className="min-h-screen relative">
-      <div className="relative h-screen py-16">
+      
+      <div className="relative h-screen pt-16">
         <Image
-          src="/bg2.png"
+          src="/bg3.png"
           alt="Hero Background"
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
           className="absolute inset-0 fixed"
         />
-        <div className="relative flex flex-col items-start justify-center h-full fixed">
-          <div className="flex justify-center w-full mt-64 flex-direction: column">
-            <h1 className="text-6xl/[64px] font-bold mt-32 px-16 py-28 h-64 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text wixui-rich-text__text font-serif italic">
-              Powering Tomorrow&apos;s Engineering, Today!<br />
-            </h1>
-          </div>
-          <div className="flex justify-center h-screen pl-72">
-            <div className="pl-96">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 mt-2 text-white p-4 text-3xl rounded-full hover:bg-gradient-to-l hover:from-pink-500 hover:to-purple-500 transition-colors duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
+      </div>
+      <div className="relative flex flex-col items-start justify-center h-full fixed">
+        <div className="flex justify-center w-full mt-64 flex-direction: column">
+          <h1 className="text-6xl/[64px] font-bold mt-32 px-16 py-28 h-64 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text wixui-rich-text__text font-serif italic">
+            Powering Tomorrow&apos;s Engineering, Today!<br />
+          </h1>
         </div>
       </div>
       <div className="container mx-auto">

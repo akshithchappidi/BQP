@@ -1,14 +1,13 @@
 import Image from "next/image";
-import FluidAnimation from "@/Components/FluidAnimation";
-import Background from "@/Components/GasFlowAnimation";
+
 
 export default function Home() {
   return (
     <div className="min-h-screen relative">
       {/* Hero Section */}
-      <canvas className="z-[-8]"><Background /></canvas>
+{/*       <canvas className="z-[-8]"><Background /></canvas> */}
       
-      <FluidAnimation />
+{/*       <FluidAnimation /> */}
       <div className="relative h-screen py-16">
         <Image
             src="/bg2.png"

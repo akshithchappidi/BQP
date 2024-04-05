@@ -8,11 +8,11 @@ const Header = () => {
 
   return (
     <header className="bg-white fixed w-full z-50">
-      <nav className="container mx-auto flex justify-between items-center p-1">
-        <div>
+      <nav className="container mx-auto flex justify-between items-center p-1 z-50">
+        <div className="z-50">
           <Image src="/BQP_Logo.png" alt="Company Logo" width={150} height={50} />
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden z-50">
           {/* Added hover and active effects to the hamburger icon */}
           <button onClick={() => setIsOpen(!isOpen)} className="hover:text-gray-500 active:text-gray-800 bg-#24A2B2">
             <i className="fa fa-bars"></i>

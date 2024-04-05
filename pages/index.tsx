@@ -3,26 +3,34 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen relative">
-      
-      <div className="relative h-screen pt-16">
+      {/* Reduced the padding-top to reduce the gap between the image and the heading */}
+      <div className="relative h-screen pt-8 z-10">
         <Image
-          src="/bg3.png"
+          src="/bg2.png"
           alt="Hero Background"
           layout="fill"
-          objectFit="contain"
-          className="absolute inset-0 fixed"
+          objectFit="cover"
+          className="absolute inset-0 fixed z-10"
         />
       </div>
-      <div className="relative flex flex-col items-start justify-center h-full fixed">
-        <div className="flex justify-center w-full mt-64 flex-direction: column">
-          <h1 className="text-6xl/[64px] font-bold mt-32 px-16 py-28 h-64 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text wixui-rich-text__text font-serif italic">
-            Powering Tomorrow&apos;s Engineering, Today!<br />
+      {/* Added flex-col to make the heading and button responsive */}
+      <div className="relative flex flex-col items-center justify-center h-full fixed z-10">
+        {/* Reduced the font size and added text-center for responsiveness */}
+        <div className="flex flex-col justify-center items-center w-full mt-1 z-10">
+          <h1 className="text-4xl md:text-3xl font-bold mt-2 px-8 py-1 h-64 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text wixui-rich-text__text font-bold font-strong text-center">
+            Powering <span className="italic">Tomorrow&apos;s</span> Engineering, <span className="italic">Today!</span>
           </h1>
+          {/* Adjusted padding for similar size as the last button and added mx-auto for center alignment */}
+          <button className="bg-gradient-to-r from-purple-500 to-pink-500 mt-2 text-white p-2 text-2xl rounded-full hover:bg-gradient-to-l hover:from-pink-500 hover:to-purple-500 transition-colors duration-300 z-10 mx-auto">
+            Learn More
+          </button>
         </div>
       </div>
-      <div className="container mx-auto">
+      {/* Added max-w-full for responsiveness */}
+      <div className="container mx-auto max-w-full">
         <div className="shadow-xl rounded-lg p-8" style={{ transform: 'skewY(0deg)', background: 'linear-gradient(to bottom, black, #24A2B2)' }}>
-          <h2 className="text-5xl font-bold mb-2 text-center text-emerald-400">Trusted By</h2>
+          <h2 className="text-3xl font-bold mb-2 text-center text-emerald-400">Trusted By</h2>
+          {/* Added flex-wrap for responsiveness */}
           <div className="flex justify-center flex-wrap container z-15 shadow-xl ">
             <Image src="/1.png" alt="Partner Logo 1" width={200} height={150} className="m-4" />
             <Image src="/2.png" alt="Partner Logo 2" width={200} height={150} className="m-4" />
@@ -32,13 +40,17 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-12 flex flex-col md:flex-row items-center" style={{ transform: 'skewY(0deg)', background: 'linear-gradient(to bottom, #24A2B2, white)' }}>
-        <div className="flex flex-col items-center px-8 md:px-0">
-          <p className="text-5xl mb-8 text-center font-serif text-white leading-relaxed px-80">
+      {/* Added max-w-full for responsiveness */}
+      <div className="container mx-auto py-12 flex flex-col md:flex-row items-center max-w-full" style={{ transform: 'skewY(0deg)', background: 'linear-gradient(to bottom, #24A2B2, white)' }}>
+        {/* Added text-center for responsiveness */}
+        <div className="flex flex-col items-center px-8 md:px-0 text-center">
+          {/* Reduced the font size and added text-center for responsiveness */}
+          <p className="text-3xl mb-8 font-serif text-white leading-relaxed px-80">
             BQPhy - The World&apos;s First Cloud-Based Simulation Platform That Empowers Engineers to Explore unexplored Simulations at Lightning Speed,<br />
             Resulting in Faster Innovation and Cost-Effective Solutions.
           </p>
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 mt-8 text-white p-4 text-3xl rounded-full hover:bg-gradient-to-l hover:from-pink-500 hover:to-purple-500 transition-colors duration-300">
+          {/* Adjusted padding for similar size as the last button and added mx-auto for center alignment */}
+          <button className="bg-gradient-to-r from-purple-500 to-pink-500 mt-8 text-white p-4 text-2xl rounded-full hover:bg-gradient-to-l hover:from-pink-500 hover:to-purple-500 transition-colors duration-300 mx-auto">
             Learn More
           </button>
         </div>

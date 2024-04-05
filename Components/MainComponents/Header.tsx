@@ -13,21 +13,23 @@ const Header = () => {
           <Image src="/BQP_Logo.png" alt="Company Logo" width={150} height={50} />
         </div>
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
+          {/* Added hover and active effects to the hamburger icon */}
+          <button onClick={() => setIsOpen(!isOpen)} className="hover:text-gray-500 active:text-gray-800 bg-#24A2B2">
             <i className="fa fa-bars"></i>
           </button>
         </div>
         <ul className={`flex space-x-4 ${isOpen ? "" : "hidden"} md:flex`}>
-          <li>
+          {/* Increased the font size for regular screens */}
+          <li className="text-lg md:text-xl">
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li className="text-lg md:text-xl">
             <Link href="/career">Career</Link>
           </li>
-          <li>
+          <li className="text-lg md:text-xl">
             <Link href="/about">About Us</Link>
           </li>
-          <li>
+          <li className="text-lg md:text-xl">
             <Link href="/newsroom">News Room</Link>
           </li>
         </ul>

@@ -8,7 +8,7 @@ import FooterDown from "@/Components/Footer/FooterDown";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-    <div className="h-32 relative w-full"><Header /></div>
+    <div className="relative w-full overflow-hidden"><Header /></div>
     
       
       

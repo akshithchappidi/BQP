@@ -72,7 +72,7 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          {isMobile && (
+          {/* {isMobile && (
             <div className="absolute top-0 right-0 m-4">
               <button
                 type="button"
@@ -99,7 +99,7 @@ const Header = () => {
                 </svg>
               </button>
             </div>
-          )}
+          )} */}
           <div
             className={`${
               isMobileMenuOpen ? 'block' : 'hidden'

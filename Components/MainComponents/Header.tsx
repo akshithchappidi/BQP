@@ -22,6 +22,7 @@ const Header = () => {
   };
 
   return (
+    <div className="h-32">
     <nav className="bg-white border-gray-200 bg-white h-32 z-50 fixed w-full" style={{zIndex: 9999}}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       
@@ -125,6 +126,7 @@ const Header = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 

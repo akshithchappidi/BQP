@@ -12,25 +12,27 @@ const Header = () => {
         <div>
           <Image src="/BQP_Logo.png" alt="Company Logo" width={150} height={50} />
         </div>
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            <i className="fa fa-bars"></i>
-          </button>
+        <div className="flex justify-end">
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)}>
+              <i className="fa fa-bars"></i>
+            </button>
+          </div>
+          <ul className={`flex space-x-4 ${isOpen ? "" : "hidden"} md:flex`}>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/career">Career</Link>
+            </li>
+            <li>
+              <Link href="/about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/newsroom">News Room</Link>
+            </li>
+          </ul>
         </div>
-        <ul className={`flex space-x-4 ${isOpen ? "" : "hidden"} md:flex`}>
-          <li>
-            <Link href="/" className="text-2xl md:text-xl">Home</Link>
-          </li>
-          <li>
-            <Link href="/career" className="text-2xl md:text-xl">Career</Link>
-          </li>
-          <li>
-            <Link href="/about" className="text-2xl md:text-xl">About Us</Link>
-          </li>
-          <li>
-            <Link href="/newsroom" className="text-2xl md:text-xl">News Room</Link>
-          </li>
-        </ul>
       </nav>
     </header>
   );

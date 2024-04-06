@@ -8,29 +8,27 @@ const Header = () => {
 
   return (
     <header className="bg-white fixed w-full z-50">
-      <nav className="container mx-auto flex justify-between items-center p-1 z-50">
-        <div className="z-50">
+      <nav className="container mx-auto flex justify-between items-center p-2">
+        <div>
           <Image src="/BQP_Logo.png" alt="Company Logo" width={150} height={50} />
         </div>
-        <div className="md:hidden z-50">
-          {/* Added hover and active effects to the hamburger icon */}
-          <button onClick={() => setIsOpen(!isOpen)} className="hover:text-gray-500 active:text-gray-800 bg-#24A2B2">
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)}>
             <i className="fa fa-bars"></i>
           </button>
         </div>
         <ul className={`flex space-x-4 ${isOpen ? "" : "hidden"} md:flex`}>
-          {/* Increased the font size for regular screens */}
-          <li className="text-lg md:text-xl">
-            <Link href="/">Home</Link>
+          <li>
+            <Link href="/" className="text-2xl md:text-xl">Home</Link>
           </li>
-          <li className="text-lg md:text-xl">
-            <Link href="/career">Career</Link>
+          <li>
+            <Link href="/career" className="text-2xl md:text-xl">Career</Link>
           </li>
-          <li className="text-lg md:text-xl">
-            <Link href="/about">About Us</Link>
+          <li>
+            <Link href="/about" className="text-2xl md:text-xl">About Us</Link>
           </li>
-          <li className="text-lg md:text-xl">
-            <Link href="/newsroom">News Room</Link>
+          <li>
+            <Link href="/newsroom" className="text-2xl md:text-xl">News Room</Link>
           </li>
         </ul>
       </nav>

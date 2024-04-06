@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative w-full">
       {/* Reduced the padding-top to reduce the gap between the image and the heading */}
       <div className="relative h-screen pt-8 z-10">
         <Image

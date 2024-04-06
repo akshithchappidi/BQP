@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Header = () => {
   return (
     <header className="bg-white text-black py-4 px-6 flex items-center justify-between fixed w-full z-50 transition-all duration-300">
-      <div className="flex items-center">
+      <div className="flex justify-between">
         <Image
           src="/BQP_Logo.png"
           alt="Company Logo"
@@ -18,7 +18,7 @@ const Header = () => {
           <p className="text-sm">Powering Tomorrow&apos;s, Enginnering Today</p>
         </div>
       </div>
-      <nav className="block">
+      <nav className="block justify-right pl-86">
         <ul className="flex space-x-4">
           <li>
             <Link href="/" className="hover:text-gray-600">

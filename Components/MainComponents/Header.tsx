@@ -21,7 +21,7 @@ const Header = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const isMobile = windowWidth <= 768;
+  const isMobile = windowWidth <= 408;
 
   return (
     <div className="h-32">

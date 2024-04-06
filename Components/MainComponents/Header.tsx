@@ -27,7 +27,7 @@ const Header = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       
         <div className="flex items-center cursor-pointer">
-        <Image src="/BQP_Logo.png" alt="logo-image" width={500} height={500} className="w-20 h-20 m-2" />
+        <img src="/BQP_Logo.png" alt="logo-image" className="w-20 h-20 m-2" />
           <div>
             <h1 className="text-3xl font-bold text-gray-800">BosonQ Psi</h1>
             <h3 className="text-lg text-black">

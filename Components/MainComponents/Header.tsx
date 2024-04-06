@@ -26,12 +26,50 @@ const Header = () => {
   return (
     <div className="h-32">
       <nav className="bg-white border-gray-200 bg-white h-32 z-50 fixed w-full" style={{ zIndex: 9999 }}>
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <div className="flex items-center cursor-pointer">
-            <Image src="/BQP_Logo.png" alt="logo-image" width={80} height={80} className="m-2" />
-            <div>
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
+          <div className="flex items-center">
+            <Image src="/BQP_Logo.png" alt="logo-image" width={80} height={80} className="ml-4" />
+            <div className="ml-4">
               <h1 className="text-3xl font-bold text-gray-800">BosonQ Psi</h1>
               <h3 className="text-lg text-black">Enabling Simulations with Quantum Paradigms</h3>
+            </div>
+          </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <ul className="flex space-x-4 font-medium">
+              <li>
+                <Link href="/" legacyBehavior>
+                  <a className="hover:bg-blue-100 text-black-500 hover:text-gray-800 px-3 py-2 rounded-md">Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" legacyBehavior>
+                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100 px-3 py-2 rounded-md">About Us</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/career" legacyBehavior>
+                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100 px-3 py-2 rounded-md">Careers</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/newsroom" legacyBehavior>
+                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100 px-3 py-2 rounded-md">News</a>
+                </Link>
+              </li>
+            </ul>
+            <div className="flex items-center space-x-4 ml-4">
+              <Link href="#" aria-label="Twitter" className="text-gray-500 hover:text-gray-800">
+                <Image src="/assets/Twitter.png" alt="Twitter" width={24} height={24} />
+              </Link>
+              <Link href="#" aria-label="Instagram" className="text-gray-500 hover:text-gray-800">
+                <Image src="/assets/Instagram.png" alt="Instagram" width={24} height={24} />
+              </Link>
+              <Link href="#" aria-label="LinkedIn" className="text-gray-500 hover:text-gray-800">
+                <Image src="/assets/LinkedIn.png" alt="LinkedIn" width={24} height={24} />
+              </Link>
+              <Link href="#" aria-label="YouTube" className="text-gray-500 hover:text-gray-800">
+                <Image src="/assets/YouTube.png" alt="YouTube" width={24} height={24} />
+              </Link>
             </div>
           </div>
           {isMobile && (
@@ -96,22 +134,6 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          {!isMobile && (
-            <div className="flex items-center space-x-4">
-              <Link href="#" aria-label="Twitter" className="text-gray-500 hover:text-gray-800">
-                <Image src="/assets/Twitter.png" alt="Twitter" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="Instagram" className="text-gray-500 hover:text-gray-800">
-                <Image src="/assets/Instagram.png" alt="Instagram" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="LinkedIn" className="text-gray-500 hover:text-gray-800">
-                <Image src="/assets/LinkedIn.png" alt="LinkedIn" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="YouTube" className="text-gray-500 hover:text-gray-800">
-                <Image src="/assets/YouTube.png" alt="YouTube" width={24} height={24} />
-              </Link>
-            </div>
-          )}
         </div>
       </nav>
     </div>

@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import React from "react";
 
-const MapWithNoSSR = dynamic(() => import("./FooterComponents/Map"), {
-  ssr: false,
-});
+// const MapWithNoSSR = dynamic(() => import("./FooterComponents/Map"), {
+//   ssr: false,
+// });
 
 interface FooterProps {
   bools?: boolean;
@@ -101,7 +101,7 @@ function Footer({ bools }: FooterProps) {
     </div>
   </div>
     <div className="w-1/2 pr-8 flex flex-col items-center relative h-60 justify-center mb-4 lg:mb-8">
-    {/* <MapWithNoSSR /> */}
+    
     </div>
   <div className="w-1/3 pl-5 pr-10 flex flex-col items-start justify-start">
     <div className="text-md uppercase text-teal-500 font-bold">
@@ -116,7 +116,7 @@ function Footer({ bools }: FooterProps) {
   </div>
 <div className="flex lg:hidden flex-col items-center justify-center shadow-lg rounded space-y-4 px-4" style={themeStyles}>
   <div className="w-full pr-8 flex flex-col items-center relative h-auto justify-center">
-    <MapWithNoSSR />
+    {/* <MapWithNoSSR /> */}
   </div>
   <div className="flex flex-row md:flex-col space-y-4 md:space-y-0 items-center md:space-x-4 justify-between w-full">
     <div className="flex flex-row w-full items-start justify-between px-2 md:px-8">

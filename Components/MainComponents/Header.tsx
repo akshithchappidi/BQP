@@ -1,143 +1,241 @@
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
+// Header.tsx
+
+import Link from 'next/link';
+
+import Image from 'next/image';
+
+import { useState, useEffect } from 'react';
+
+
 
 const Header = () => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
 
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleToggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+
+
+  const toggleMenu = () => {
+
+    setIsOpen(!isOpen);
+
   };
 
-  const isMobile = windowWidth <= 408;
+
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+
+      setIsScrolled(window.pageYOffset > 0);
+
+    };
+
+
+
+    window.addEventListener('scroll', handleScroll);
+
+
+
+    return () => {
+
+      window.removeEventListener('scroll', handleScroll);
+
+    };
+
+  }, []);
+
+
 
   return (
-    <div className="h-32">
-      <nav className="bg-white border-gray-200 bg-white h-32 z-50 fixed w-full" style={{ zIndex: 9999 }}>
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
-          <div className="flex items-center">
-            <Image src="/BQP_Logo.png" alt="logo-image" width={80} height={80} className="ml-4" />
-            <div className="ml-4">
-              <h1 className="text-3xl font-bold text-gray-800">BosonQ Psi</h1>
-              <h3 className="text-lg text-black">Enabling Simulations with Quantum Paradigms</h3>
-            </div>
-          </div>
-          <div className="hidden md:flex items-center space-x-8">
-            <ul className="flex space-x-4 font-medium">
-              <li>
-                <Link href="/" legacyBehavior>
-                  <a className="hover:bg-blue-100 text-black-500 hover:text-gray-800 px-3 py-2 rounded-md">Home</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" legacyBehavior>
-                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100 px-3 py-2 rounded-md">About Us</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/career" legacyBehavior>
-                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100 px-3 py-2 rounded-md">Careers</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/newsroom" legacyBehavior>
-                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100 px-3 py-2 rounded-md">News</a>
-                </Link>
-              </li>
-            </ul>
-            <div className="flex items-center space-x-4 ml-4">
-              <Link href="#" aria-label="Twitter" className="text-gray-500 hover:text-gray-800">
-                <Image src="/assets/Twitter.png" alt="Twitter" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="Instagram" className="text-gray-500 hover:text-gray-800">
-                <Image src="/assets/Instagram.png" alt="Instagram" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="LinkedIn" className="text-gray-500 hover:text-gray-800">
-                <Image src="/assets/LinkedIn.png" alt="LinkedIn" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="YouTube" className="text-gray-500 hover:text-gray-800">
-                <Image src="/assets/YouTube.png" alt="YouTube" width={24} height={24} />
-              </Link>
-            </div>
-          </div>
-          {/* {isMobile && (
-            <div className="absolute top-0 right-0 m-4">
-              <button
-                type="button"
-                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="navbar-dropdown"
-                aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
-                onClick={handleToggleMobileMenu}
-              >
-                <span className="sr-only">Open main menu</span>
-                <svg
-                  className="w-5 h-5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 17 14"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M1 1h15M1 7h15M1 13h15"
-                  />
-                </svg>
-              </button>
-            </div>
-          )} */}
-          {/* <div
-            className={`${
-              isMobileMenuOpen ? 'block' : 'hidden'
-            } ${isMobile ? 'w-full' : 'md:w-auto'}`}
-            id="navbar-dropdown"
-          >
-            <ul
-              className={`flex flex-col font-medium p-4 ${
-                isMobile ? 'mt-16' : 'md:mt-0'
-              } border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:border-0 md:bg-white bg-white`}
-            >
-              
-              <li>
-                <Link href="/" legacyBehavior>
-                  <a className=" hover:bg-blue-100 text-black-500 hover:text-gray-800">Home</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" legacyBehavior>
-                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100">About Us</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/career" legacyBehavior>
-                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100">Careers</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/newsroom" legacyBehavior>
-                  <a className="text-black-500 hover:text-gray-800 hover:bg-blue-100">News</a>
-                </Link>
-              </li>
-            </ul>
-          </div> */}
+
+    <header
+
+      className={`bg-white text-black py-4 px-6 flex items-center justify-between fixed w-full z-50 transition-all duration-300 ${
+
+        isScrolled ? 'shadow-md' : ''
+
+      }`}
+
+    >
+
+      <div className="flex items-center">
+
+        <Image
+
+          src="/BQP_Logo.png"
+
+          alt="Company Logo"
+
+          width={50}
+
+          height={50}
+
+          className="mr-4"
+
+        />
+
+        <div>
+
+          <h1 className="text-xl font-bold">BosonQ Psi</h1>
+
+          <p className="text-sm">Powering Tomorrow&apos;s, Enginnering Today</p>
+
         </div>
+
+      </div>
+
+      <nav className="hidden md:block">
+
+        <ul className="flex space-x-4">
+
+          <li>
+
+            <Link href="/" className="hover:text-gray-600">
+
+              Home
+
+            </Link>
+
+          </li>
+
+          <li>
+
+            <Link href="/about" className="hover:text-gray-600">
+
+              About Us
+
+            </Link>
+
+          </li>
+
+          <li>
+
+            <Link href="/carrer" className="hover:text-gray-600">
+
+              Careers
+
+            </Link>
+
+          </li>
+
+          <li>
+
+            <Link href="/newsroom" className="hover:text-gray-600">
+
+              NewsRoom
+
+            </Link>
+
+          </li>
+
+        </ul>
+
       </nav>
-    </div>
+
+      <div className="md:hidden">
+
+        <button
+
+          onClick={toggleMenu}
+
+          className="focus:outline-none text-black hover:text-gray-600"
+
+        >
+
+          <svg
+
+            className="h-6 w-6 fill-current"
+
+            xmlns="http://www.w3.org/2000/svg"
+
+            viewBox="0 0 24 24"
+
+          >
+
+            {isOpen ? (
+
+              <path
+
+                fillRule="evenodd"
+
+                clipRule="evenodd"
+
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+
+              />
+
+            ) : (
+
+              <path
+
+                fillRule="evenodd"
+
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+
+              />
+
+            )}
+
+          </svg>
+
+        </button>
+
+      </div>
+
+      <div
+
+        className={`${
+
+          isOpen ? 'block' : 'hidden'
+
+        } md:hidden bg-white w-full absolute left-0 p-4 shadow-md`}
+
+      >
+
+        <ul className="space-y-2">
+
+        <li>
+
+            <Link href="/" className="hover:text-gray-600">
+
+              Home
+
+            </Link>
+
+          </li>
+
+          <li>
+
+            <Link href="/about" className="block hover:text-gray-600">
+
+              Careers
+
+            </Link>
+
+          </li>
+
+          <li>
+
+            <Link href="/newsroom" className="hover:text-gray-600">
+
+              NewsRoom
+
+            </Link>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </header>
+
   );
+
 };
+
+
 
 export default Header;

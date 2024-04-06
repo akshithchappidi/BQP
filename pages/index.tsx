@@ -17,9 +17,9 @@ export default function Home() {
       <div className="relative flex flex-col items-center justify-center h-full fixed z-10">
         {/* Reduced the font size and added text-center for responsiveness */}
         <div className="flex flex-col justify-center items-center w-full mt-1 z-10">
-          <h1 className="text-4xl md:text-3xl font-bold mt-2 px-8 py-1 h-64 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text wixui-rich-text__text font-bold font-strong text-center">
-            Powering <span className="italic">Tomorrow&apos;s</span> Engineering, <span className="italic">Today!</span>
-          </h1>
+        <h1 className="text-6xl md:text-3xl font-bold mt-2 px-8 py-1 h-64 bg-gradient-to-r from-custom-blue to-white text-transparent bg-clip-text wixui-rich-text__text font-bold font-strong text-center">
+          Powering <span className="italic">Tomorrow&apos;s</span> Engineering, <span className="italic">Today!</span>
+        </h1>
           {/* Adjusted padding for similar size as the last button and added mx-auto for center alignment */}
           <button className="bg-gradient-to-r from-purple-500 to-pink-500 mt-2 text-white p-2 text-2xl rounded-full hover:bg-gradient-to-l hover:from-pink-500 hover:to-purple-500 transition-colors duration-300 z-10 mx-auto">
             Learn More

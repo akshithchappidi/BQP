@@ -1,12 +1,6 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/BQP_Logo.png";
-import twitter from "../../public/assets/Twitter.png";
-import instagram from "../../public/assets/Instagram.png";
-import linkedin from "../../public/assets/LinkedIn.png";
-import youtube from "../../public/assets/YouTube.png";
-
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,7 +26,7 @@ const Header = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       
         <div className="flex items-center cursor-pointer">
-          <Image src={logo} alt="log-image" className="w-20 h-20 m-2" />
+        <Image src="/BQP_Logo.png" alt="logo-image" width={500} height={500} className="w-20 h-20 m-2" />
           <div>
             <h1 className="text-3xl font-bold text-gray-800">BosonQ Psi</h1>
             <h3 className="text-lg text-black">
@@ -105,28 +99,28 @@ const Header = () => {
           aria-label="Twitter"
           className="text-gray-500 hover:text-gray-800"
         >
-          <Image src={twitter} alt="Twitter" width={24} height={24} />
+          <Image src="/assets/Twitter.png" alt="Twitter" width={24} height={24} />
         </Link>
         <Link
           href="#"
           aria-label="Instagram"
           className="text-gray-500 hover:text-gray-800"
         >
-          <Image src={instagram} alt="Instagram" width={24} height={24} />
+          <Image src="/assets/Instagram.png" alt="Instagram" width={24} height={24} />
         </Link>
         <Link
           href="#"
           aria-label="LinkedIn"
           className="text-gray-500 hover:text-gray-800"
         >
-          <Image src={linkedin} alt="LinkedIn" width={24} height={24} />
+          <Image src="/assets/LinkedIn.png" alt="LinkedIn" width={24} height={24} />
         </Link>
         <Link
           href="#"
           aria-label="YouTube"
           className="text-gray-500 hover:text-gray-800"
         >
-          <Image src={youtube} alt="YouTube" width={24} height={24} />
+          <Image src="/assets/YouTube.png" alt="YouTube" width={24} height={24} />
         </Link>
         </div>
       </div>

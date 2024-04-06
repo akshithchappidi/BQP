@@ -8,11 +8,10 @@ import FooterDown from "@/Components/Footer/FooterDown";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-    <div className="z-50"><Header /></div>
+    <Header />
       
-      <main className="container mx-auto py-8">
+      
         <Component {...pageProps} />
-      </main>
       <Footer />
       <FooterDown />
     </>

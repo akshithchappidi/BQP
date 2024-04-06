@@ -100,7 +100,7 @@ const Header = () => {
               </button>
             </div>
           )} */}
-          <div
+          {/* <div
             className={`${
               isMobileMenuOpen ? 'block' : 'hidden'
             } ${isMobile ? 'w-full' : 'md:w-auto'}`}
@@ -111,7 +111,7 @@ const Header = () => {
                 isMobile ? 'mt-16' : 'md:mt-0'
               } border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:border-0 md:bg-white bg-white`}
             >
-              {/* Your navigation items */}
+              
               <li>
                 <Link href="/" legacyBehavior>
                   <a className=" hover:bg-blue-100 text-black-500 hover:text-gray-800">Home</a>
@@ -133,7 +133,7 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </nav>
     </div>

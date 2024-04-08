@@ -24,16 +24,18 @@ const AboutUs = () => {
         </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
             <div className="relative rounded-full overflow-hidden group">
+            <div className="w-68 h-64 relative">
               <Image
                 src="/CEO.webp"
                 alt="Team Member 1"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-full object-cover"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full"
               />
+            </div>
               <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-black">
-                  <h3 className="text-xl font-bold mb-2">Abhishek Chopra</h3>
+                  <h3 className="text-xl font-bold mb-2">ABHISHEK CHOPRA</h3>
                   <p className="mb-2">CEO</p>
                   <div className="flex justify-center space-x-4">
                     <a href="#" className="text-black hover:text-gray-300">
@@ -49,18 +51,20 @@ const AboutUs = () => {
                 </div>
               </div>
               <div className="text-center text-black">
-                <p className="mb-2 text-xl font-extrabold tracking-wide">Abhishek Chopra</p>
+                <p className="mb-2 text-xl font-extrabold tracking-wide">ABHISHEK CHOPRA</p>
                 <p className="mb-4 text-lg italic">Founder, Chief Executive and <br></br> Scientific Officer</p>
             </div>
             </div>
             <div className="relative rounded-full overflow-hidden group">
+            <div className="w-68 h-64 relative">
               <Image
                 src="/CTO.webp"
                 alt="Team Member 1"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-full object-cover"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full"
               />
+            </div>
               <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-black">
                   <h3 className="text-xl font-bold mb-2">RUT LINESWALA</h3>
@@ -84,13 +88,15 @@ const AboutUs = () => {
             </div>
             </div>
             <div className="relative rounded-full overflow-hidden group">
+            <div className="w-68 h-64 relative">
               <Image
                 src="/COO.webp"
                 alt="Team Member 1"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-full object-cover"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full"
               />
+            </div>
               <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-black">
                   <h3 className="text-xl font-bold mb-2">JASH MINOCHA</h3>
@@ -117,22 +123,22 @@ const AboutUs = () => {
 
 
             <div className="relative rounded-full overflow-hidden group">
-            <Image
-                src="/CFO.webp"
+            <div className="w-68 h-64 relative">
+              <Image
+                src="/Aditya.png"
                 alt="Team Member 1"
-                width={300}
-                height={300}
-                className="w-full h-auto rounded-full object-cover"
-            />
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full"
+              />
+            </div>
             <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-black">
-                <h3 className="text-xl font-bold mb-2">Aditya SIngh</h3>
+                <h3 className="text-xl font-bold mb-2">ADITYA SINGH</h3>
                 <p className="mb-2">Head of Bussiness</p>
                 <div className="flex justify-center space-x-4">
                     <a href="#" className="text-white hover:text-gray-300">
                     <i className="fab fa-linkedin"></i>
-                    <img  src="/linkdin.jpg" alt="" className="inline w-6 h-6 rouned-xl justify-center"/>
-                    <img  src="/linkdin.jpg" alt="" className="inline w-6 h-6 rouned-xl justify-center mx-2"/>
                     </a>
                     <a href="#" className="text-white hover:text-gray-300">
                     <i className="fab fa-twitter"></i>
@@ -144,19 +150,21 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className="text-center text-black">
-                <p className="mb-2 text-xl font-extrabold tracking-wide">Aditya Singh</p>
+                <p className="mb-2 text-xl font-extrabold tracking-wide">ADITYA SINGH</p>
                 <p className="mb-2 text-lg italic">Founding Member and<br></br> VP of Business & Infra</p>
             </div>
             </div>
             {/* <div className="py-16 flex flex-row grid grid-cols-4 gap-4"> */}
             <div className="relative rounded-full overflow-hidden group">
-            <Image
-                src="/vijay.webp"
+            <div className="w-68 h-64 relative">
+              <Image
+                src="/Vijay.webp"
                 alt="Team Member 1"
-                width={300}
-                height={300}
-                className="rounded-full object-cover"
-            />
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full"
+              />
+            </div>
             <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="text-center text-black">
                 <h3 className="text-xl font-bold mb-2">VIJAY SETHI</h3>

@@ -4,39 +4,36 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <header className="bg-white text-black py-4 px-6 flex items-center justify-between fixed w-full z-50 transition-all duration-300">
+    <header className="bg-white text-black py-2 px-6 flex items-center justify-between fixed w-full z-50 transition-all duration-300">
       <div className="flex justify-between">
         <Image
           src="/BQP_Logo.png"
           alt="Company Logo"
-          width={50}
-          height={50}
+          width={100}
+          height={100}
           className="mr-4"
         />
-        <div>
-          <h1 className="text-xl font-bold">BosonQ Psi</h1>
-          <p className="text-sm">Powering Tomorrow&apos;s, Enginnering Today</p>
-        </div>
+
       </div>
       <nav className="block justify-right pl-86">
         <ul className="flex space-x-4">
           <li>
-            <Link href="/" className="hover:text-gray-600">
+            <Link href="/" className="hover:text-gray-600 text-xl pr-8">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-gray-600">
+            <Link href="/about" className="hover:text-gray-600 text-xl pr-8">
               About Us
             </Link>
           </li>
           <li>
-            <Link href="/carrer" className="hover:text-gray-600">
+            <Link href="/career" className="hover:text-gray-600 text-xl pr-8">
               Careers
             </Link>
           </li>
           <li>
-            <Link href="/newsroom" className="hover:text-gray-600">
+            <Link href="/newsroom" className="hover:text-gray-600 text-xl">
               NewsRoom
             </Link>
           </li>

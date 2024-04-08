@@ -4,13 +4,13 @@ import NewsCard from "../Components/NewsCard";
 const news = [
   {
     title: "New Product Launch",
-    description: "We are excited to announce the launch of our new product...",
+    description: "When Rubber Meets the Road: Improved tyre performance through Advanced Simulations...",
     image: "/news1.webp",
     link: "https://medium.com/@marketing_26310/when-rubber-meets-the-road-improved-tyre-performance-through-advanced-simulations-c337ec5f4dc6",
   },
   {
     title: "Company Expansion",
-    description: "Our company is expanding its operations to...",
+    description: "Enabling Complex Simulations with Quantum Algorithms on High-Performance Computing...",
     image: "/news2.webp",
     link: "https://medium.com/@marketing_26310/enabling-complex-simulations-with-quantum-algorithms-on-high-performance-computing-dec999d8fe41",
   },
@@ -24,26 +24,26 @@ const news = [
   
   {
     title: "Company Expansion",
-    description: "Our company is expanding its operations to...",
+    description: "Topology Optimization powered by Quantum for smarter, faster engineering simulations...",
     image: "/news4.webp",
     link: "https://medium.com/@marketing_26310/topology-optimization-powered-by-quantum-for-smarter-faster-engineering-simulations-9435b669b8af",
   },
 
   {
     title: "Company Expansion",
-    description: "Our company is expanding its operations to...",
+    description: "Topology Optimization of Airfoil Structures Using Quantum-Inspired Design Optimization Technique...",
     image: "/news5.gif",
     link: "https://medium.com/@marketing_26310/topology-optimization-of-airfoil-structures-using-quantum-inspired-design-optimization-technique-f38dba038d95",
   },
   {
     title: "Company Expansion",
-    description: "Our company is expanding its operations to...",
+    description: "Charging 2W/3W EV performance with Simulations powered by Quantum...",
     image: "/news6.webp",
     link: "https://medium.com/@marketing_26310/charging-2w-3w-ev-performance-with-simulations-powered-by-quantum-b47fd98d9b0a",
   },
   {
     title: "Company Expansion",
-    description: "Our company is expanding its operations to...",
+    description: "Quantum-Inspired Evolutionary Algorithms: Revolutionizing Optimization in Engineering...",
     image: "/news7.webp",
     link: "https://medium.com/@marketing_26310/quantum-inspired-evolutionary-algorithms-revolutionizing-optimization-in-engineering-ed164b69f186",
   },

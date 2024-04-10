@@ -43,7 +43,7 @@ const AboutComponent = () => {
           </p>
           <br />
           <p className="text-2xl text-white font-serif mt-4">
-            <GradientText gradient="green, white">At BQP,</GradientText> we're leading the charge in advanced simulation platforms with
+            <GradientText gradient="green, white">At BQP,</GradientText> we&apos;re leading the charge in advanced simulation platforms with
             one mission: to revolutionize computational problem-solving.
             <br />{" "}
             <br />
@@ -51,7 +51,7 @@ const AboutComponent = () => {
             solutions, slashing months off development cycles and saving millions.
             Integrated with quantum algorithms,
             <br /> <br />
-            our platform operates on today's HPC frameworks and future quantum
+            our platform operates on today&apos;s HPC frameworks and future quantum
             computers, offering superior solutions. Our platform offers
             unprecedented possibilities with engineering simulations,
             particularly in the aerospace, manufacturing, and energy sectors.

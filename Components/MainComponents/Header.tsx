@@ -18,8 +18,8 @@ const Header = () => {
       <nav className="block justify-right pl-86">
         <ul className="flex space-x-4">
           <li>
-            <Link href="/" className="hover:text-gray-600 text-xl pr-8">
-              Home
+            <Link href="/" className="hover:text-gray-600 text-xl pr-8" >
+            Home
             </Link>
           </li>
           <li>

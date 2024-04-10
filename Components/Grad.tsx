@@ -31,7 +31,7 @@ const GradientText: React.FC = () => {
       <div className="mb-8 md:mb-0 md:mr-8">
         <h2 className="text-2xl font-bold mb-4 text-gray-400">Our Innovative Solutions</h2>
         <div ref={textRef} className="text-lg bg-clip-text text-transparent text-emerald-400">
-          BQPhy - The World's First Cloud-Based Simulation Platform That Empowers Engineers to Explore unexplored
+          BQPhy - The World&apos; First Cloud-Based Simulation Platform That Empowers Engineers to Explore unexplored
           Simulations at Lightning Speed,<br></br> Resulting in Faster Innovation and Cost-Effective Solutions.
         </div>
       </div>
